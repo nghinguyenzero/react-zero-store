@@ -6,6 +6,8 @@ import Appbar from './components/appbar';
 import './App.css';
 import theme from './styles/theme';
 import Banner from './components/banner';
+import Promotions from './components/promotions';
+import Products from './components/products';
 
 function App() {
 
@@ -23,14 +25,9 @@ function App() {
       >
         <Appbar/>
         <Banner/>
-        {/* App
-        Promotions
-        title
-        Products
-        footer
-        Searchbox
-        AppWrapper */}
-        <Button variant='contained'> Test</Button>
+        <Promotions/>
+        <Products/>
+
       </Container>
     </ThemeProvider>
 

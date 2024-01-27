@@ -13,7 +13,7 @@ export default function AppbarMobile({matches}) {
                 <MenuIcon></MenuIcon>
             </IconButton>
             <AppbarHeader textAlign={'center'} variant="h4">
-                My bags
+                My Coffee
             </AppbarHeader>
             <IconButton>
                 <SearchIcon/>
