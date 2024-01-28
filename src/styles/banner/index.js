@@ -37,7 +37,7 @@ export  const BannerTitle = styled(Typography)(({theme})=>({
 
 export  const BannerImgage = styled('img')(({src, theme})=>({
 
-    src: `url${src}`,
+    src: `url(${src})`,
     width: '500px',
     [theme.breakpoints.down('md')] : {
         width: '350px',

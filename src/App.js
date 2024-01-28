@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {  Button, Container } from '@mui/material';
+import {  Box, Button, Container, Typography } from '@mui/material';
 import { ThemeProvider } from '@mui/system';
 
 import Appbar from './components/appbar';
@@ -26,6 +26,11 @@ function App() {
         <Appbar/>
         <Banner/>
         <Promotions/>
+        <Box display={'flex'} justifyContent={'center'} sx={{p: 4}}>
+          <Typography variant='h4'>
+              Our products
+          </Typography>
+        </Box>
         <Products/>
 
       </Container>
