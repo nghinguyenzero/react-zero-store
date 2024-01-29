@@ -12,7 +12,7 @@ import Products from './components/products';
 function App() {
 
   useEffect(()=>{
-    document.title='React UI - Home'
+    document.title='OP Store'
   }, [])
 
   return (

@@ -45,7 +45,7 @@ export default function Promotions () {
             <Box 
                 display={'flex'}
                 justifyContent={'center'}
-                alignItem={'center'}
+                alignItems={'center'}
 
             >
                 <MessengerText>

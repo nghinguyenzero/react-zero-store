@@ -7,7 +7,7 @@ export default function AppbarDesktop({matches}) {
 
     return (
             <AppbarContainer>
-                <AppbarHeader> My Coffee</AppbarHeader>
+                <AppbarHeader> OP Store</AppbarHeader>
                 <Mylist type='row'>
                     <ListItemText primary='Home'/>
                     <ListItemText primary='Categories'/>

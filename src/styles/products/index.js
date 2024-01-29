@@ -3,6 +3,7 @@ import { Colors } from "../theme";
 import { slideInBottom, slideInRight} from "../../animation";
 
 import { Button, IconButton, Box } from "@mui/material";
+// import { Box } from "@mui/system";
 
 
 export const Product = styled(Box)(({theme})=>({
@@ -25,9 +26,7 @@ export const ProductImage = styled('img')(({src, theme})=>({
     [theme.breakpoints.down('md')] : {
         width: '80%',
         padding: '24px',
-
     }   
-
 }))
 
 export const ProductActionButton = styled(IconButton)(()=>({
@@ -48,7 +47,6 @@ export const ProductFavButton = styled(ProductActionButton, {
 
 export const ProductAddCart = styled(Button, {
     shouldForwardProp: (prop) => prop !== 'show'
-
 })(({show, theme})=>({
     width:  '120px',
     fontSize: '12px',
@@ -74,13 +72,13 @@ export const ProductMetaWrapper = styled(Box,{
 }))
 
 
-export const ProductActionWrapper = styled(Box)((show, theme)=>({
+export const ProductActionsWrapper = styled(Box)(({show, theme})=>({
     [theme.breakpoints.up('md')] : {
         display: show ? 'visible' : 'none',
         position: 'absolute',
-         right: 0,
-          top: '20px',
-          animation: show && `${slideInRight} 0.5s cubic-bezier(0.250 0.460 0.450 0.940) both`
+        right: 0,
+        top: '20%',
+        animation: show && `${slideInRight} 0.5s cubic-bezier(0.250 0.460 0.450 0.940) both`
     }
 }))
 

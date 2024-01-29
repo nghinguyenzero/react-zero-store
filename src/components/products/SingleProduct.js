@@ -1,5 +1,9 @@
 import { Stack } from "@mui/material";
-import { Product, ProductActionButton, ProductActionWrapper, ProductAddCart, ProductFavButton, ProductImage } from "../../styles/products";
+import { 
+    Product, ProductActionButton, 
+    ProductActionsWrapper, ProductAddCart, 
+    ProductFavButton, ProductImage 
+} from "../../styles/products";
 import ProductMeta from "./ProductMeta";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
@@ -12,16 +16,19 @@ function SingleProduct({product, matches}) {
             <Product>
                 <ProductImage src={product.image}></ProductImage>
                 <ProductMeta product={product} matches={matches}> </ProductMeta>
-                <ProductActionWrapper>
-                    <Stack direction='column'>
+                <ProductActionsWrapper product={product} matches={matches}>
+                    <Stack direction='row'>
                         <ProductFavButton isFav={0}>
-                            <FavoriteIcon></FavoriteIcon>
+                            <FavoriteIcon/>
                         </ProductFavButton>
                         <ProductActionButton>
-                            <ShareIcon color="primary"></ShareIcon>
+                            <ShareIcon color="primary"/>
+                        </ProductActionButton>
+                        <ProductActionButton>
+                            <FitScreenIcon color="primary"/>
                         </ProductActionButton>
                     </Stack>
-                </ProductActionWrapper>
+                </ProductActionsWrapper>
             </Product>
             <ProductAddCart variant="contained"> Add to cart</ProductAddCart>
         </>
