@@ -1,6 +1,7 @@
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+
 import { AppbarContainer, AppbarHeader } from "../../styles/appbar";
 import Actions from "./actions";
 import { useUIContext } from "../../context/ui";
@@ -8,7 +9,7 @@ import { useUIContext } from "../../context/ui";
 
 
 export default function AppbarMobile({matches}) {
-    const { setDrawerOpen} = useUIContext()
+    const { setDrawerOpen, setShowSearchBox} = useUIContext()
     return (
         <AppbarContainer>
             <IconButton onClick={()=>setDrawerOpen(true)}>
@@ -18,7 +19,7 @@ export default function AppbarMobile({matches}) {
                 OP Store
             </AppbarHeader>
             <IconButton>
-                <SearchIcon/>
+                <SearchIcon onClick={()=>setShowSearchBox(true)}/>
             </IconButton>
             <Actions matches={matches}/>
         </AppbarContainer>
