@@ -1,6 +1,6 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { BannerContainer, BannerContent, BannerDescription, BannerImgage, BannerTitle } from "../../styles/banner";
+import { BannerContainer, BannerContent, BannerDescription, BannerImgage, BannerShopButton, BannerTitle } from "../../styles/banner";
 
 
 export default function Banner() {
@@ -16,6 +16,7 @@ export default function Banner() {
                 <BannerDescription variant="subtitle">
                 OP Store - Nơi đắm chìm trong thế giới anime với tượng thạch cao chất lượng cao. Mang về nhà bạn những nhân vật yêu thích từ One Piece với đa dạng sản phẩm độc đáo.
                 </BannerDescription>
+                <BannerShopButton color="primary">Shop now</BannerShopButton>
             </BannerContent>
         </BannerContainer>
     )

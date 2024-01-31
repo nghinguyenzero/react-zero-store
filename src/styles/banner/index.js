@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
 import { Colors } from "../theme";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 export const BannerContainer = styled(Box)(({theme})=>({
     display: 'flex',
@@ -60,3 +60,25 @@ export  const BannerDescription = styled(Typography)(({theme})=>({
     }
 
 }))
+
+
+export  const BannerShopButton = styled(Button, {
+        shouldForwardProp: (prop) => prop !== 'color',
+        name: 'MyShopButton',
+        slot: 'Root',
+        overridesResolver: (props, styles) => [
+            styles.root,
+            props.color ==='primary' && styles.primary,
+            props.color ==='secondary' && styles.secondary,
+        ]
+    })(({theme})=>({
+        padding: "20px 0px",
+        // color: Colors.white,
+        fontWeight: 'bold',
+        fontSize: '16px',
+        [theme.breakpoints.down('sm')] : {
+            padding: '10px 0px',
+            fontSize:'14px',
+        }
+    }))
+
