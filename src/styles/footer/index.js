@@ -12,8 +12,8 @@ export const SubcribeTf = styled(TextField)(()=>({
     '.MuiInputLabel-root' : {
         color: Colors.secondary
     },
-    '.MuiInputLabel-root::before' : {
-        borderButtom: `1px solid ${Colors.secondary}`
+    '.MuiInput-root::before' : {
+        borderBottom: `1px solid ${Colors.secondary}`
     }
 
 }))

@@ -99,7 +99,8 @@ function Footer() {
                          label='Email adress'
                          variant="standard"
                          />
-                        <Button startIcon={<SendIcon sx={{color: Colors.white}}></SendIcon>}
+                        <Button 
+                            startIcon={<SendIcon sx={{color: Colors.white}}></SendIcon>}
                             sx={{mt: 4, mb: 4}}
                             variant="contained"
                         >

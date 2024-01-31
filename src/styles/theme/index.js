@@ -39,24 +39,42 @@ const theme = createTheme({
                 disableElevation: true
             }
         },
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    width: 250,
+                    background:  Colors.primary,
+                    color: Colors.secondary,
+                    borderRadius:  '0px 100px 0px 0px',
+                    borderRight: `1px solid ${Colors.secondary}`
+                }
+            }       
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    borderColor: lighten(Colors.primary, 0.2 )
+                },
+            }
+        },
         MyShopButton: {
             styleOverrides: {
                 root: {
                     color: Colors.white
                 },
-                // primary : {
-                //     background: Colors.primary,
-                //     '&:hover' : {
-                //         background: lighten(0.05, Colors.primary)
+                primary : {
+                    background: Colors.primary,
+                    '&:hover' : {
+                        background: lighten(Colors.primary, 0.05)
 
-                //     } 
-                // },
-                // secondary : {
-                //     background: Colors.secondary,
-                //     '&:hover' : {
-                //         background: lighten(0.05, Colors.secondary) 
-                //     } 
-                // }
+                    } 
+                },
+                secondary : {
+                    background: Colors.secondary,
+                    '&:hover' : {
+                        background: lighten(Colors.secondary, 0.05) 
+                    } 
+                }
             }
         }
      }
