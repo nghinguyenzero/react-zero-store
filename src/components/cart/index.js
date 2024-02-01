@@ -94,8 +94,7 @@ export default function Cart() {
                     Proceed to payment
                 </Button>
 
-            </Box>
-            : <Box
+            </Box> : <Box
                 display='flex'
                 justifyContent={'center'}
                 flexDirection={'column'}
@@ -103,13 +102,14 @@ export default function Cart() {
                 sx={{ p: 4 }}
             >
                 <Typography 
-                    variant={matches ? 'h5' : 'h3'}
-                    color= {Colors.black}    
+                    variant={!!matches ? 'h5' : 'h3'}
+                    color={Colors.black}    
                 >
                     Your cart is empty !!!
                 </Typography>
             </Box>
             }
+            <Button onClick={()=>setShowCart(false)}>Close</Button>
 
         </Drawer>
 
