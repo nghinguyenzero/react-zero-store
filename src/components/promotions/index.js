@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import { MessengerText, PromotionsContainer } from "../../styles/promotions"
 import { Box } from "@mui/system";
 import { Slide } from "@mui/material";
 
+import { MessengerText, PromotionsContainer } from "../../styles/promotions"
 
 const messenges = [
     "20% off on your second order!",
@@ -11,10 +11,9 @@ const messenges = [
 ]
 
 export default function Promotions () {
+    const containerRef = useRef()
     const [messengerIndex, setMessengerIndex] = useState(0)
     const [show, setShow] = useState(true)
-
-    const containerRef = useRef()
 
     useEffect(()=>{
         setTimeout(() => {
@@ -22,8 +21,12 @@ export default function Promotions () {
         }, 3000);
 
         const intervalId = setInterval(()=>{
-            setMessengerIndex(i =>  (i+1) % messenges.length)
+            setMessengerIndex(i => ( i + 1 ) % messenges.length)
             setShow(true)
+
+            setTimeout(() => {
+                setShow(false)
+            }, 3000);
         }, 4000)
 
         return () => {
@@ -36,7 +39,7 @@ export default function Promotions () {
     <PromotionsContainer ref={containerRef}>
         <Slide 
             container={containerRef.current}
-            direction={show? 'left' : 'right'} in={show}
+            direction={show ? 'left' : 'right'} in={show}
              timeout={{
                 enter: 500,
                 exit: 100

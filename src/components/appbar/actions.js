@@ -8,8 +8,8 @@ import { Colors } from "../../styles/theme";
 
 export default function Actions ({matches}) {
     const Component = matches 
-        ? ActionIconsContainerMobile
-        : ActionIconsContainerDesktop
+        ? ActionIconsContainerDesktop 
+        : ActionIconsContainerMobile
     return(
         <Component>
             <Mylist type='row'>

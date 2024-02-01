@@ -15,8 +15,8 @@ function SearchBox() {
                 variant="standard"
                 fullWidth
                 placeholder="Search..."
-            >
-                <IconButton>
+            />
+            <IconButton>
                     <SearchIcon
                         sx={{fontSize: {
                             xs: '2rem', md: '3rem'
@@ -37,8 +37,6 @@ function SearchBox() {
                         color='secondary'
                     />
                 </IconButton>
-
-            </SearchField>
         </SearchBoxContainer>
     </Slide>
     );
