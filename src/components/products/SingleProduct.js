@@ -14,7 +14,8 @@ import ProductDetail from "../productDetail";
 
 function SingleProduct({product, matches}) {
     const [ProductDetailDialog, showProductDetailDialog, 
-        closeProductDetailDialog] = useDialogModal(ProductDetail)
+        // closeProductDetailDialog
+    ] = useDialogModal(ProductDetail)
     return (
         <>
             <Product>

@@ -22,10 +22,10 @@ export const products = [
     },    
     {
         id: 4 ,
-        name: 'Naruto',
-        price: 32000,
-        description: "Trà đào: Hương thơm tinh tế, hòa quyện vị ngọt của đào, mang lại cảm giác dễ chịu.",
-        image: '/images/products/img_naruto.jpg',
+        name: 'Law',
+        price: 300000,
+        description: "Bác sĩ, sở hữu trái Ope ope, là một siêu tân tinh",
+        image: '/images/products/img_law.jpg',
     },
     {
         id: 5 ,
@@ -36,10 +36,10 @@ export const products = [
     },
     {
         id: 6 ,
-        name: 'Dracule Mihawk',
-        price: 32000,
-        description: "Trà đào: Hương thơm tinh tế, hòa quyện vị ngọt của đào, mang lại cảm giác dễ chịu.",
-        image: '/images/products/img_mihawk.jpg',
+        name: 'Itachi Uchiha',
+        price: 300000,
+        description: "Anh trai của Sarukes",
+        image: '/images/products/img_itachi.jpg',
     },
     {
         id: 7 ,
@@ -64,10 +64,10 @@ export const products = [
     },
     {
         id: 10 ,
-        name: 'Law',
-        price: 300000,
-        description: "Bác sĩ, sở hữu trái Ope ope, là một siêu tân tinh",
-        image: '/images/products/img_law.jpg',
+        name: 'Naruto',
+        price: 32000,
+        description: "Trà đào: Hương thơm tinh tế, hòa quyện vị ngọt của đào, mang lại cảm giác dễ chịu.",
+        image: '/images/products/img_naruto.jpg',
     },
     {
         id: 11 ,
@@ -92,9 +92,10 @@ export const products = [
     },
     {
         id: 14 ,
-        name: 'Itachi Uchiha',
-        price: 300000,
-        description: "Anh trai của Sarukes",
-        image: '/images/products/img_itachi.jpg',
-    }
+        name: 'Dracule Mihawk',
+        price: 32000,
+        description: "Trà đào: Hương thơm tinh tế, hòa quyện vị ngọt của đào, mang lại cảm giác dễ chịu.",
+        image: '/images/products/img_mihawk.jpg',
+    },
+
 ]

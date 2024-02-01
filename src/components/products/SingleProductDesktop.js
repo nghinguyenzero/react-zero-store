@@ -15,28 +15,31 @@ import useDialogModal from "../../hooks/useDialogModal";
 
 
 function SingleProductDesktop({product, matches}) {
-    const [ProductDetailDialog, showProductDetailDialog, 
-        closeProductDetailDialog] = useDialogModal(ProductDetail)
+    const [
+        ProductDetailDialog,
+        //  closeProductDetailDialog,
+        showProductDetailDialog, 
+        ] = useDialogModal(ProductDetail)
 
-    const [showOptions, setShowOptions] = useState(true)
+    const [showOptions, setShowOptions] = useState(false)
     const handleMouseEnter = () => {
-
+        setShowOptions(true)
     }
     const handleMouseLeave = () => {
-
+        setShowOptions(false)
     }
     return (
         <>
             <Product 
                 onMouseEnter={handleMouseEnter}
-                onmouseleave={handleMouseLeave}
+                onMouseLeave={handleMouseLeave}
             >
                 <ProductImage src={product.image}></ProductImage>
                 <ProductFavButton isFav={0}>
                     <FavoriteIcon/>
                 </ProductFavButton>
                     {showOptions && (
-                        <ProductAddCart show={showOptions} variant="outline">
+                        <ProductAddCart show={showOptions} variant="outlined">
                             Add to cart
                         </ProductAddCart>
                     )}
@@ -55,6 +58,7 @@ function SingleProductDesktop({product, matches}) {
                 </ProductActionsWrapper>
             </Product>
             <ProductMeta product={product} matches={matches}/>
+            <ProductDetailDialog product={product}/>
         </>
     );
 }
