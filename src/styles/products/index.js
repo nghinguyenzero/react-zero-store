@@ -3,7 +3,6 @@ import { Colors } from "../theme";
 import { slideInBottom, slideInRight} from "../../animation";
 
 import { Button, IconButton, Box } from "@mui/material";
-// import { Box } from "@mui/system";
 
 
 export const Product = styled(Box)(({theme})=>({

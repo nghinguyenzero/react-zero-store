@@ -12,6 +12,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon from "@mui/icons-material/FitScreen";
 import ProductDetail from "../productDetail";
 import useDialogModal from "../../hooks/useDialogModal";
+import useCart from "../../hooks/useCart";
 
 
 function SingleProductDesktop({product, matches}) {
@@ -22,6 +23,8 @@ function SingleProductDesktop({product, matches}) {
         ] = useDialogModal(ProductDetail)
 
     const [showOptions, setShowOptions] = useState(false)
+
+    const {addToCart, addToCartText} = useCart(product)
     const handleMouseEnter = () => {
         setShowOptions(true)
     }
@@ -34,15 +37,20 @@ function SingleProductDesktop({product, matches}) {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <ProductImage src={product.image}></ProductImage>
+                <ProductImage src={product.image}/>
                 <ProductFavButton isFav={0}>
                     <FavoriteIcon/>
                 </ProductFavButton>
-                    {showOptions && (
-                        <ProductAddCart show={showOptions} variant="outlined">
-                            Add to cart
-                        </ProductAddCart>
-                    )}
+
+                {showOptions && (
+                    <ProductAddCart 
+                        show={showOptions} variant="outlined"
+                        onClick={addToCart}
+                    >
+                        {addToCartText}
+                    </ProductAddCart>
+                )}
+
                 <ProductActionsWrapper show={showOptions}>
                     <Stack direction='column'>
                         <ProductFavButton isFav={0}>

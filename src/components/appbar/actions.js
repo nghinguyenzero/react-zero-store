@@ -1,15 +1,19 @@
-import { Divider, ListItemButton, ListItemIcon } from "@mui/material";
+import { Badge, Divider, ListItemButton, ListItemIcon } from "@mui/material";
 import { Mylist, ActionIconsContainerDesktop, ActionIconsContainerMobile } from "../../styles/appbar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import PersonIcon from "@mui/icons-material/Person"
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import { Colors } from "../../styles/theme";
+// import useCart from "../../hooks/useCart";
+import { useUIContext } from "../../context/ui";
 
 
 export default function Actions ({matches}) {
+    console.log('Actions',matches );
+    const {cart, setShowCart } = useUIContext() 
     const Component = matches 
-        ? ActionIconsContainerDesktop 
-        : ActionIconsContainerMobile
+        ? ActionIconsContainerMobile
+        : ActionIconsContainerDesktop
     return(
         <Component>
             <Mylist type='row'>
@@ -25,10 +29,11 @@ export default function Actions ({matches}) {
                                 color: matches && Colors.secondary
                             }}
                         >
-                            <ShoppingCartIcon/>
+                            <Badge badgeContent={cart && cart.length} color="secondary">
+                                <ShoppingCartIcon onClick={()=> setShowCart(true)}/>
+                            </Badge>
                         </ListItemIcon>
                     </ListItemButton>
-
                     <Divider orientation="vertical" flexItem></Divider>
                     <ListItemButton
                         sx={{

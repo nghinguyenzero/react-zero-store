@@ -1,4 +1,4 @@
-import { useTheme, Dialog, DialogContent, DialogTitle, IconButton, Slide, useMediaQuery, Typography, Button } from "@mui/material";
+import { Dialog, DialogContent, DialogTitle, IconButton, Slide, useMediaQuery, Typography, Button } from "@mui/material";
 import { Colors } from "../../styles/theme";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box, styled } from "@mui/system";
@@ -8,8 +8,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-
-import SendIcon from "@mui/icons-material/Send";
+import { useTheme } from "@mui/material/styles";
 
 function SlideTransition(props) {
     return <Slide direction='down' {...props}/>

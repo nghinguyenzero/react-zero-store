@@ -32,7 +32,7 @@ export const Mylist = styled(List)(({type})=>({
 }))
 
 
-export const ActionIconsContainerDesktop = styled(Box)(()=>({
+export const  ActionIconsContainerMobile = styled(Box)(()=>({
     display: 'flex',
     background: Colors.shaft,
     position: 'fixed',
@@ -44,7 +44,7 @@ export const ActionIconsContainerDesktop = styled(Box)(()=>({
     borderTop: `1px solid ${Colors.border}`,
 }))
 
-export const ActionIconsContainerMobile = styled(Box)(()=>({
+export const ActionIconsContainerDesktop = styled(Box)(()=>({
     flexGrow: 0
     // display: 'flex',
     // background: Colors.shaft,

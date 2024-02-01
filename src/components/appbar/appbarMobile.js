@@ -10,6 +10,8 @@ import { useUIContext } from "../../context/ui";
 
 export default function AppbarMobile({matches}) {
     const { setDrawerOpen, setShowSearchBox} = useUIContext()
+    console.log('AppbarDesktop', matches);
+
     return (
         <AppbarContainer>
             <IconButton onClick={()=>setDrawerOpen(true)}>
