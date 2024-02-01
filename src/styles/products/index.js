@@ -72,7 +72,9 @@ export const ProductMetaWrapper = styled(Box,{
 }))
 
 
-export const ProductActionsWrapper = styled(Box)(({show, theme})=>({
+export const ProductActionsWrapper = styled(Box, {
+    // shouldForwardProp: (prop) => prop !=='show'
+})(({show, theme})=>({
     [theme.breakpoints.up('md')] : {
         display: show ? 'visible' : 'none',
         position: 'absolute',

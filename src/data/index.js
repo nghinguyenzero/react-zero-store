@@ -1,9 +1,9 @@
 export const products = [
     {
         id: 1,
-        name: 'Milk tea',
+        name: 'Sora Kasugano ',
         price: 29000,
-        description: "Tra sua",
+        description: "Sora Kasugano là nhân vật nữ chính và là em gái song sinh của Haruka Kasugano.",
         image: '/images/products/img_1.jpg',
     },
     {
@@ -11,7 +11,7 @@ export const products = [
         name: 'Monkey D Luffy',
         price: 19000,
         description: "Cà phê phin: Hương thơm đậm đà, pha truyền thống, đắng nhẹ, ghiền lâu.",
-        image: '/images/products/img_2.jpg',
+        image: '/images/products/img_luffy_g5.jpg',
     },
     {
         id: 3,
@@ -40,6 +40,61 @@ export const products = [
         price: 32000,
         description: "Trà đào: Hương thơm tinh tế, hòa quyện vị ngọt của đào, mang lại cảm giác dễ chịu.",
         image: '/images/products/img_mihawk.jpg',
+    },
+    {
+        id: 7 ,
+        name: 'Gold D Ace',
+        price: 32000,
+        description: "Con trai cuả vua hải tặc, anh trai của nhân vật chính",
+        image: '/images/products/img_ace.jpg',
+    },
+    {
+        id: 8 ,
+        name: 'Shark',
+        price: 300000,
+        description: "Shank tóc đỏ, là một Yonko ",
+        image: '/images/products/img_shark.jpg',
+    },
+    {
+        id: 9 ,
+        name: 'Kid',
+        price: 300000,
+        description: "Kid ve chai, là một siêu tân tinh",
+        image: '/images/products/img_kid.jpg',
+    },
+    {
+        id: 10 ,
+        name: 'Law',
+        price: 300000,
+        description: "Bác sĩ, sở hữu trái Ope ope, là một siêu tân tinh",
+        image: '/images/products/img_law.jpg',
+    },
+    {
+        id: 11 ,
+        name: 'Minato',
+        price: 300000,
+        description: "Cha của Naruto, tia chớp làng lá, Hokage đệ 4",
+        image: '/images/products/img_minato.jpg',
+    },
+    {
+        id: 12 ,
+        name: 'Nami',
+        price: 300000,
+        description: "Hoa tiêu, thuyền viên của băng mũ rơm",
+        image: '/images/products/img_nami.jpg',
+    },
+    {
+        id: 13 ,
+        name: 'Maco',
+        price: 300000,
+        description: "Thuyền phó băng hải tặc râu trắng",
+        image: '/images/products/img_maco.jpg',
+    },
+    {
+        id: 14 ,
+        name: 'Itachi Uchiha',
+        price: 300000,
+        description: "Anh trai của Sarukes",
+        image: '/images/products/img_itachi.jpg',
     }
-
 ]

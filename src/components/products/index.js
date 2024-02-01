@@ -1,13 +1,16 @@
 import { Container, Grid, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { products } from "../../data";
 import SingleProduct from "./SingleProduct";
 import SingleProductDesktop from "./SingleProductDesktop";
+import { useState } from "react";
+import AppPagination from "../pagination";
 
 function Products() {
 
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.down('md'))
+    const [products, setProducts] = useState([])
+
     const renderProducts = products.map(product => (
         <Grid
             item 
@@ -40,6 +43,7 @@ function Products() {
             >
                 {renderProducts}
             </Grid>
+            <AppPagination setProducts={(p)=>setProducts(p)}></AppPagination>
         </Container>
     );
 }
