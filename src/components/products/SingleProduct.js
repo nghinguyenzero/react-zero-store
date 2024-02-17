@@ -17,7 +17,7 @@ function SingleProduct({product, matches}) {
     const [
             ProductDetailDialog,    
             showProductDetailDialog, 
-            closeProductDetailDialog
+            // closeProductDetailDialog
     ] = useDialogModal(ProductDetail)
     const { addToCart, addToCartText} = useCart(product)
     return (

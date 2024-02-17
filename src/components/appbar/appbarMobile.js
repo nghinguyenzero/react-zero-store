@@ -8,9 +8,8 @@ import { useUIContext } from "../../context/ui";
 
 
 
-export default function AppbarMobile({matches}) {
+export default function AppbarMobile({matches,onLoginClick, onLogoutClick}) {
     const { setDrawerOpen, setShowSearchBox} = useUIContext()
-    console.log('AppbarDesktop', matches);
 
     return (
         <AppbarContainer>
@@ -23,7 +22,11 @@ export default function AppbarMobile({matches}) {
             <IconButton>
                 <SearchIcon onClick={()=>setShowSearchBox(true)}/>
             </IconButton>
-            <Actions matches={matches}/>
+            <Actions 
+                matches={matches} 
+                onLogin={onLoginClick}
+                onLogout={onLogoutClick}
+            />
         </AppbarContainer>
     )
 

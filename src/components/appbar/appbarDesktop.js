@@ -5,9 +5,8 @@ import {  AppbarContainer, AppbarHeader, Mylist } from "../../styles/appbar";
 import Actions from "./actions";
 import { useUIContext } from "../../context/ui";
 
-export default function AppbarDesktop({matches}) {
+export default function AppbarDesktop({matches,onLoginClick, onLogoutClick}) {
     const { setShowSearchBox} = useUIContext()
-    console.log('AppbarDesktop', matches);
 
     return (
             <AppbarContainer>
@@ -23,7 +22,11 @@ export default function AppbarDesktop({matches}) {
                         </ListItemIcon>
                     </ListItemButton>
                 </Mylist>
-                <Actions matches={matches}/>
+                <Actions 
+                    matches={matches}
+                    onLogin={onLoginClick}
+                    onLogout={onLogoutClick}
+                />
             </AppbarContainer>
     )
 }
