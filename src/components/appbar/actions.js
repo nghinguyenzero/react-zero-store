@@ -1,4 +1,4 @@
-import { Badge, Divider, ListItemButton, ListItemIcon, Menu, MenuItem } from "@mui/material";
+import { Badge, Box, Divider, ListItemButton, ListItemIcon, Menu, MenuItem, Typography } from "@mui/material";
 import { Mylist, ActionIconsContainerDesktop, ActionIconsContainerMobile } from "../../styles/appbar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import PersonIcon from "@mui/icons-material/Person"
@@ -7,11 +7,13 @@ import { Colors } from "../../styles/theme";
 // import useCart from "../../hooks/useCart";
 import { useUIContext } from "../../context/ui";
 import { useState } from "react";
+import { useUser } from "../../context/ui/User";
 
 
 export default function Actions ({matches, onLogin, onLogout}) {
     console.log('Actions',matches );
     const {cart, setShowCart } = useUIContext() 
+    const { user } = useUser()
     const [anchorEl, setAnchorEl] = useState(null)
     const Component = matches 
         ? ActionIconsContainerMobile
@@ -48,13 +50,11 @@ export default function Actions ({matches, onLogin, onLogout}) {
                                 justifyContent:'center',
                                 color: matches && Colors.secondary
                             }}
-                            onClick={(event)=>setAnchorEl(event.currentTarget)}
                         >
-                            <PersonIcon/>
+                            <FavoriteIcon/>
                         </ListItemIcon>
-                    </ListItemButton>   
+                    </ListItemButton>
                     <Divider orientation="vertical" flexItem />
-
                     <ListItemButton
                         sx={{
                             justifyContent:'center'
@@ -66,21 +66,29 @@ export default function Actions ({matches, onLogin, onLogout}) {
                                 justifyContent:'center',
                                 color: matches && Colors.secondary
                             }}
+                            onClick={(event)=>setAnchorEl(event.currentTarget)}
                         >
-                            <FavoriteIcon/>
+                            <Box display='flex' flexDirection='column'>
+                                <PersonIcon/>
+                                {
+                                    user && <Typography variant="caption">
+                                    {user.displayName}
+                                </Typography>
+                                }
+                            </Box>
                         </ListItemIcon>
-                    </ListItemButton>
+                    </ListItemButton>   
                     <Divider orientation="vertical" flexItem />
-
             </Mylist>
             <Menu
                 anchorEl={anchorEl}
                 open={anchorEl !== null}
                 onClose={()=> setAnchorEl(null)}
             >
-                <MenuItem onClick={onLogin}>Login</MenuItem>
-                <MenuItem onClick={onLogout}>Logout</MenuItem>
-
+            {
+                user ? <MenuItem onClick={onLogout}>Logout</MenuItem> 
+                    : <MenuItem onClick={onLogin}>Login</MenuItem>
+            }
             </Menu>
         </Component>
     )

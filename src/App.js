@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {  Box, Button, Container, Typography } from '@mui/material';
+import {  Box, Container, Typography } from '@mui/material';
 import { ThemeProvider } from '@mui/system';
 
 import Appbar from './components/appbar';
@@ -13,6 +13,7 @@ import AppDrawer from './components/drawer';
 import { UIProvider } from './context/ui';
 import SearchBox from './components/search';
 import Cart from './components/cart';
+import UserProvider from './context/ui/User';
 
 function App() {
 
@@ -29,19 +30,21 @@ function App() {
         }}
       >
         <UIProvider>
-          <Appbar/>
-          <Banner/>
-          <Promotions/>
-          <Box display={'flex'} justifyContent={'center'} sx={{p: 4}}>
-            <Typography variant='h4'>
-                Our products
-            </Typography>
-          </Box>
-          <Products/>
-          <Footer/>
-          <AppDrawer/>
-          <Cart/>
-          <SearchBox/>
+          <UserProvider>
+            <Appbar/>
+            <Banner/>
+            <Promotions/>
+            <Box display={'flex'} justifyContent={'center'} sx={{p: 4}}>
+              <Typography variant='h4'>
+                  Our products
+              </Typography>
+            </Box>
+            <Products/>
+            <Footer/>
+            <AppDrawer/>
+            <Cart/>
+            <SearchBox/>
+          </UserProvider>
         </UIProvider>
       </Container>
     </ThemeProvider>

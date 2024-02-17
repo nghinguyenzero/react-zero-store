@@ -12,27 +12,35 @@ export default function Login({open, onClose}) {
         password: ''
     })
     const [joinUs, setJoinUs] = useState(false)
+    const [loading, setLoading] = useState(false)
 
                         
     const handleJoinUsSubmit = async (event) => {
         event.preventDefault()
+        setLoading(true)
         console.log({form});
 
         try {
             await firebasedb.register({...form})
+            onClose()
         } catch (error) {
             console.log({error});
         }
+        setLoading(false)
+
     }
     
 
     const handleLoginSubmit = async (event) => {
         event.preventDefault()
+        setLoading(true)
         try {
             await firebasedb.login({...form})
+            onClose()
         } catch (error) {
             console.log({error});
         }
+        setLoading(false)
     }
      const hanldeSetFormField =( value, field)=>{
         setForm({...form, [field]: value})
@@ -91,7 +99,10 @@ export default function Login({open, onClose}) {
                             sx={{mb:2}}
                             fullWidth
                             />
-                            <Button fullWidth type="submit" variant="contained">Sign up</Button>
+
+                            <Button disabled={loading} fullWidth type="submit" variant="contained">
+                                { loading ? 'Please waiting...' : 'Sign up' }
+                            </Button>
                         </form>
                         <Box sx={{mt:2}} textAlign={'center'}>
                             <Typography variant="caption">
@@ -123,7 +134,9 @@ export default function Login({open, onClose}) {
                                 value={form.password}
                                 onChange={(event)=>hanldeSetFormField( event.target.value, 'password')}
                             />
-                            <Button fullWidth type="submit" variant="contained">Login</Button>
+                            <Button disabled={loading} fullWidth type="submit" variant="contained">
+                                { loading ? 'Please waiting...' : 'Login' }
+                            </Button>
                         </form>
                         <Box sx={{mt:2}} textAlign={'center'}>
                             <Typography variant="caption">

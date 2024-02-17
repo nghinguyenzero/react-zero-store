@@ -17,7 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app)
+export const auth = getAuth(app)
 
 async function register({firstname, lastname, email, password}) {
   const resp = await createUserWithEmailAndPassword(
