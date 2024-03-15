@@ -32,9 +32,10 @@ export default function Actions ({matches, onLogin, onLogout}) {
                                 justifyContent:'center',
                                 color: matches && Colors.secondary
                             }}
+                            onClick={()=> setShowCart(true)}
                         >
                             <Badge badgeContent={cart && cart.length} color="secondary">
-                                <ShoppingCartIcon onClick={()=> setShowCart(true)}/>
+                                <ShoppingCartIcon />
                             </Badge>
                         </ListItemIcon>
                     </ListItemButton>

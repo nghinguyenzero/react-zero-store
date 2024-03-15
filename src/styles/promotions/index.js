@@ -6,12 +6,12 @@ import { Typography } from "@mui/material";
 export  const PromotionsContainer = styled(Box)(({theme})=>({
     
     [theme.breakpoints.up('md')] : {
-        padding: '20px 0px'
+        padding: '15px 0px'
     },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px 0px',
+    padding: '15px 0px',
     // overflow: 'hidden',
     background: Colors.secondary
 
@@ -21,7 +21,7 @@ export  const PromotionsContainer = styled(Box)(({theme})=>({
 export  const MessengerText = styled(Typography)(({theme})=>({
     fontFamily: '"Montez", "cursive"',
     [theme.breakpoints.up('md')]: {
-        fontSize: '3rem'
+        fontSize: '2rem'
     },
     color: Colors.white,
     fontSize: '1.5rem'

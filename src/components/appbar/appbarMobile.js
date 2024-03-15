@@ -17,7 +17,7 @@ export default function AppbarMobile({matches,onLoginClick, onLogoutClick}) {
                 <MenuIcon/>
             </IconButton>
             <AppbarHeader textAlign={'center'} variant="h4">
-                OP Store
+            Sun Store
             </AppbarHeader>
             <IconButton>
                 <SearchIcon onClick={()=>setShowSearchBox(true)}/>

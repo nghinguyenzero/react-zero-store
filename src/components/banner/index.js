@@ -9,14 +9,14 @@ export default function Banner() {
 
     return (
         <BannerContainer>
-            <BannerImgage src={'/images/banner/luffy.jpg'}/>
+            <BannerImgage src={'/images/banner/luffyg5.png'}/>
             <BannerContent>
-                <Typography variant="h6"> OP Collection</Typography>
-                <BannerTitle variant="h3"> New products </BannerTitle>
+                <Typography variant="h6"> New Collection</Typography>
+                <BannerTitle variant="h3">One piece </BannerTitle>
                 <BannerDescription variant="subtitle">
-                OP Store - Nơi đắm chìm trong thế giới anime với tượng thạch cao chất lượng cao. Mang về nhà bạn những nhân vật yêu thích từ One Piece với đa dạng sản phẩm độc đáo.
+                🌻 Store - Nơi nơi bạn có thể tìm thấy những sản phẩm độc đáo và phong phú để thể hiện đam mê của mình. chúng tôi cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho các khách hàng
                 </BannerDescription>
-                <BannerShopButton color="primary">Shop now</BannerShopButton>
+                <BannerShopButton color="primary">🛍️ Shop now </BannerShopButton>
             </BannerContent>
         </BannerContainer>
     )

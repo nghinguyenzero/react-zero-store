@@ -2,7 +2,8 @@ import { createTheme, lighten } from "@mui/material"
 
 export const Colors =  {
     primary: '#5f2c3e',
-    secondary: '#d1adcc',
+    secondary: '#d1adcc', //'#3e9da5', //'#d1adcc',  
+    //'#3e9da5;
     success: '#4caf50',
     info: '#00a2ff',
     danger: '#ff5722',
@@ -37,6 +38,19 @@ const theme = createTheme({
             defaultProps: {
                 disableRipple: true,
                 disableElevation: true
+            }
+        },
+        MuiTooltip: {
+            defaultProps: {
+                arrow: true
+            },
+            styleOverrides : {
+                tooltip: {
+                    background: Colors.primary
+                },
+                arrow: {
+                    color: Colors.primary
+                }
             }
         },
         MuiDrawer: {

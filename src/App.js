@@ -18,7 +18,7 @@ import UserProvider from './context/ui/User';
 function App() {
 
   useEffect(()=>{
-    document.title='OP Store'
+    document.title='Sun Store'
   }, [])
 
   return (
@@ -34,7 +34,7 @@ function App() {
             <Appbar/>
             <Banner/>
             <Promotions/>
-            <Box display={'flex'} justifyContent={'center'} sx={{p: 4}}>
+            <Box display={'flex'} justifyContent={'center'} sx={{p: 3}}>
               <Typography variant='h4'>
                   Our products
               </Typography>

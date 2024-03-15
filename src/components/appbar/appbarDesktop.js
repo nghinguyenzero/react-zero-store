@@ -10,9 +10,9 @@ export default function AppbarDesktop({matches,onLoginClick, onLogoutClick}) {
 
     return (
             <AppbarContainer>
-                <AppbarHeader> OP Store</AppbarHeader>
+                <AppbarHeader> Sun Store</AppbarHeader>
                 <Mylist type='row'>
-                    <ListItemText primary='Home'/>
+                    <ListItemText primary='🌻'/>
                     <ListItemText primary='Categories'/>
                     <ListItemText primary='Products'/>
                     <ListItemText primary='Contact us'/>

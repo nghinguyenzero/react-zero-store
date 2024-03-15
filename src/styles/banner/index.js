@@ -38,7 +38,9 @@ export  const BannerTitle = styled(Typography)(({theme})=>({
 export  const BannerImgage = styled('img')(({src, theme})=>({
 
     src: `url(${src})`,
-    width: '500px',
+    width: '350px',
+    padding: "30px 20px",
+
     [theme.breakpoints.down('md')] : {
         width: '350px',
     },
@@ -72,13 +74,13 @@ export  const BannerShopButton = styled(Button, {
             props.color ==='secondary' && styles.secondary,
         ]
     })(({theme})=>({
-        padding: "20px 0px",
+        padding: "15px 0px",
         // color: Colors.white,
         fontWeight: 'bold',
-        fontSize: '16px',
+        fontSize: '12px',
         [theme.breakpoints.down('sm')] : {
             padding: '10px 0px',
-            fontSize:'14px',
+            fontSize:'12px',
         }
     }))
 

@@ -29,7 +29,7 @@ export default function AppDrawer() {
         <Drawer open={drawerOpen}>
             <List>
                 <ListItemButton>
-                    <ListItemText>Home</ListItemText>
+                    <ListItemText>🌻</ListItemText>
                 </ListItemButton>
                 <MiddleDivider/>
                 <ListItemButton>
